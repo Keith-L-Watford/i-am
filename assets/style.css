@@ -1,0 +1,58 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+/* page background color */
+body {
+    background-color: #c0c0c0;
+}
+
+
+
+.header {
+    padding: 1px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: #1a1a1a;
+}
+
+/* color: rgb(9, 170, 170); */
+
+
+.header h1 {
+    color: white;
+    margin-left: 0px;
+    display: inline-block;
+    border: 1px solid rgb(9, 170, 170);;
+    background-color:  rgb(9, 170, 170);
+    padding-left: 35px;
+
+}
+
+.header nav {
+    padding-top: 20px;
+    margin-right: 20px;
+    float: right;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* removes bullet points in unordered list */
+.header nav ul {
+    list-style-type: none;
+}
+
+/* lines them horizontally and adds spacing to the left. */
+.header nav ul li {
+    display: inline-block;
+    padding-left: 15px;
+}
+
+/* since the list items are wrapped around 'a', 'a' is the one that needs the text dec and font color. */
+a {
+    color: rgb(9, 170, 170);
+    text-decoration: none;
+    padding-bottom: 3px;
+    border-bottom: 4px solid rgb(9, 170, 170);
+    font-size: 25px;
+}
