@@ -2,6 +2,14 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+:root {
+    --seafoam: #93cccf;
+    --gray: #30343c;
+    --dustyblue: #455876;
+
 }
 
 /* page background color */
@@ -12,29 +20,32 @@ body {
 
 
 .header {
-    padding: 1px;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    background-color: #1a1a1a;
+    padding: 0px;
+    /* font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; */
+    background-color: var(--gray);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
-/* color: rgb(9, 170, 170); */
 
 
 .header h1 {
-    color: white;
-    margin-left: 0px;
-    display: inline-block;
-    border: 1px solid rgb(9, 170, 170);;
-    background-color:  rgb(9, 170, 170);
-    padding-left: 35px;
+    color: var(--gray);
+    /* border: 1px solid var(--seafoam); */
+    background-color: var(--seafoam);
+    padding: 10px 15px 10px 35px;
 
 }
 
 .header nav {
-    padding-top: 20px;
-    margin-right: 20px;
-    float: right;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding-top: 5px;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+    /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+
 }
 
 /* removes bullet points in unordered list */
@@ -50,9 +61,108 @@ body {
 
 /* since the list items are wrapped around 'a', 'a' is the one that needs the text dec and font color. */
 a {
-    color: rgb(9, 170, 170);
+    color: var(--seafoam);
     text-decoration: none;
     padding-bottom: 3px;
-    border-bottom: 4px solid rgb(9, 170, 170);
+    border-bottom: 4px solid var(--seafoam);
     font-size: 25px;
+    padding-top: 20px;
+    margin-bottom: 4px;
 }
+
+h1 {
+    margin: 10px 0;
+}
+
+#background {
+    height: 200px;
+    width: 100%;
+    margin-bottom: 25px;
+    background-image: url("../assets/images/depositphotos_77651008-stock-photo-blue-gray-painted-wood-planks.jpeg");
+    background-size: cover;
+    background-position: center;
+}
+
+#on-back {
+    color: var(--gray);
+    background-color: var(--seafoam);
+    /* padding: 4px;
+    width: 16%;
+    position: relative;
+    left: 75%; */
+    position: absolute;
+    bottom: 475px;
+    right: 50px;
+    padding-left: 5px;
+    padding-right: 5px;
+    font-size: 175%;
+    border-radius: ;
+}
+article {
+    margin-bottom: 40px;
+}
+    
+#about-me {
+    padding-left: 20px;
+}
+
+.side-header {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 10px;
+    border-right: solid 3px var(--dustyblue);
+}
+
+.about {
+    display: flex;
+    align-items: center;
+}
+
+.about :first-child {
+    width: 300px;
+}
+
+.contact {
+    display: flex;
+    align-items: center;
+    
+}
+
+.contact :first-child {
+    width: 300px;
+}
+
+
+#cont {
+    display: flex;
+}
+
+#number{
+    flex: 1 1 0;
+}
+
+#email{
+    flex: 1 1 0;
+}
+
+#git {
+    flex: 1 1 0;
+}
+
+
+
+h2 {
+    
+}
+
+
+
+
+/* Media Query - Desktop*/
+@media screen and (max-width: 992px) {}
+
+/* Media Query - tablets*/
+@media screen and (max-width: 768px) {}
+
+/* Media Query - phones*/
+@media screen and (max-width: 576px) {}
