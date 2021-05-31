@@ -9,6 +9,7 @@
     --seafoam: #93cccf;
     --gray: #30343c;
     --dustyblue: #455876;
+    --side-header-margin: 300px;
 
 }
 
@@ -102,6 +103,7 @@ h1 {
 main {
     display: flex;
     flex-wrap: wrap;
+    flex-direction: column;
 }
 
 article {
@@ -125,8 +127,18 @@ article {
 }
 
 .about :first-child {
-    width: 300px;
+    width: var(--side-header-margin);
 }
+
+.work {
+    display: flex;
+    align-items: center;
+}
+
+.work :first-child {
+    width: var(--side-header-margin);
+}
+
 
 .contact {
     display: flex;
@@ -135,7 +147,7 @@ article {
 }
 
 .contact :first-child {
-    width: 300px;
+    width: var(--side-header-margin);
 }
 
 
