@@ -110,9 +110,7 @@ article {
     margin-bottom: 40px;
 }
     
-#about-me p {
-    padding-left: 20px;
-}
+
 
 .side-header {
     display: flex;
@@ -120,6 +118,8 @@ article {
     padding-right: 10px;
     border-right: solid 3px var(--dustyblue);
 }
+
+/* About Me */
 
 .about {
     display: flex;
@@ -130,6 +130,38 @@ article {
     width: var(--side-header-margin);
 }
 
+#about-me p {
+    padding-left: 20px;
+}
+
+/* Work Examples */
+
+img {
+    max-width: 600px;
+    max-height: 200px;
+    border: var(--seafoam) solid 5px;
+    transform: ;
+}
+
+
+ #b1 {
+    position: relative;
+    text-align: center;
+    display: flex;
+  
+    
+ }
+
+.bottom-left {
+    
+    position: absolute;
+    color: var(--gray);
+    border: var(--seafoam) solid 1px;
+    background-color: var(--seafoam);
+}
+
+
+
 .work {
     display: flex;
     align-items: center;
@@ -139,6 +171,48 @@ article {
     width: var(--side-header-margin);
 }
 
+#container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.box {
+    display: flex;
+    flex-wrap: wrap;
+    /* border-style: solid;
+    border-color: var(--seafoam);
+    border-width: 3px;
+    margin: 15px;
+    flex: 0 0 300px; */
+}
+
+
+
+.bottom-left {
+    position: absolute;
+  top: 8px;
+  right: 16px;x
+}
+
+
+    
+
+
+.box .side-header {
+    border: var(--seafoam) solid 3px ;
+
+    /* margin: 20px;
+    flex: 0 0 300px; */
+    
+
+}
+
+/* Contact */
 
 .contact {
     display: flex;
@@ -201,11 +275,6 @@ article {
     margin: 0px;
     display: flex;
     justify-content: center;
-}
-
-
-h2 {
-    
 }
 
 
