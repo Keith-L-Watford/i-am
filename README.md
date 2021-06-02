@@ -7,27 +7,29 @@
 - [Installation](#installation)
 - [Usage](#usage)
 - [Credits](#credits)
-- [Tests](#Tests)
+- [Notes](#Notes)
 - [License](#license)
 
 ## Installation
 No installs required.
 
 ## Usage
-Access the website by clicking the URL: !!!!!!URL!!!!!!!!!
+Access the website by clicking the URL:  https://keith-l-watford.github.io/i-am/
 
 Here's a screenshot of the reference website:
-![alt text](assets/images/portfolio_mockup.png)
+![A screenshot of the referenced website](assets/images/portfolio_mockup.png)
 
+and heres where my recreation currently stands *(as of June 2nd, 2021)*: 
+![A screenshot of my reaction](assets/images/screencapture-recreation.png)
 
 ## Credits
 Shout out to my tutor Scott, Teacher Lief, and naps.
 
-## Tests
-n/a
+## Notes
+The next time I attempt this I think I will start with a mobile first approach and use media query to size it out for bigger screens. Unfortunately, I was too far along to start over and change my approach. I now have a greater understanding of flexbox and its properties, however, theres still more to work on and utilize. 
 
 ## License
-TThis is free and unencumbered software released into the public domain.
+This is free and unencumbered software released into the public domain.
 
 Anyone is free to copy, modify, publish, use, compile, sell, or distribute this software, either in source code form or as a compiled binary, for any purpose, commercial or non-commercial, and by any means.
 
