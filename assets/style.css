@@ -10,7 +10,8 @@
     --gray: #30343c;
     --dustyblue: #455876;
     --side-header-margin: 300px;
-
+    --big-pic-width: 290%;
+    --bottom-space: 25px;
 }
 
 /* page background color */
@@ -18,11 +19,9 @@ body {
     background-color: #c0c0c0;
 }
 
-
-
+/* an early"attempt" at figuring out flex for the nav bar */
 .header {
     padding: 0px;
-    /* font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; */
     background-color: var(--gray);
     display: flex;
     justify-content: space-between;
@@ -30,14 +29,10 @@ body {
     flex-wrap: wrap;
 }
 
-
-
 .header h1 {
     color: var(--gray);
-    /* border: 1px solid var(--seafoam); */
     background-color: var(--seafoam);
     padding: 10px 15px 10px 35px;
-
 }
 
 .header nav {
@@ -45,8 +40,6 @@ body {
     display: flex;
     flex-direction: row;
     margin-bottom: 20px;
-    /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
-
 }
 
 /* removes bullet points in unordered list */
@@ -61,36 +54,42 @@ body {
 }
 
 /* since the list items are wrapped around 'a', 'a' is the one that needs the text dec and font color. */
-a {
+li a {
     color: var(--seafoam);
     text-decoration: none;
     padding-bottom: 3px;
     border-bottom: 4px solid var(--seafoam);
     font-size: 25px;
     padding-top: 20px;
-    margin-bottom: 4px;
 }
 
 h1 {
     margin: 10px 0;
 }
 
+/* backround wood image */
 #background {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    text-align: right;
+
     height: 200px;
     width: 100%;
-    margin-bottom: 25px;
+    margin-bottom: var(--bottom-space);
     background-image: url("../assets/images/depositphotos_77651008-stock-photo-blue-gray-painted-wood-planks.jpeg");
     background-size: cover;
     background-position: center;
 }
 
-#on-back {
+/* couldnt sort this mess out. Intenstion was to customize where the "cool subtitle here!" would live */
+/* #on-back {
     color: var(--gray);
     background-color: var(--seafoam);
-    /* padding: 4px;
+    padding: 4px;
     width: 16%;
-    position: relative;
-    left: 75%; */
+    
+    left: 75%;
     position: absolute;
     bottom: 475px;
     right: 50px;
@@ -98,34 +97,40 @@ h1 {
     padding-right: 5px;
     font-size: 175%;
     border-radius: ;
+} */
+
+#background p {
+    background-color: var(--seafoam);
+    color: var(--gray);
+    margin: 0;
+    padding: 5px 10px;
+    line-height: 1.2;
+    display: inline;
 }
 
-main {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
+/* the internal border line next to the body headers */
+.about-me,
+.container,
+.contact ul {
+    border-left: solid 3px var(--dustyblue);
+    padding-left: 1rem;
 }
-
-article {
-    margin-bottom: 40px;
-}
-    
-
 
 .side-header {
     display: flex;
     justify-content: flex-end;
     padding-right: 10px;
-    border-right: solid 3px var(--dustyblue);
 }
 
 /* About Me */
-
 .about {
     display: flex;
     align-items: center;
+    width: 98%;
+    margin-bottom: var(--bottom-space);
 }
 
+/* unsure how/why i got into the first-child stuff. but removing it now breaks the design */
 .about :first-child {
     width: var(--side-header-margin);
 }
@@ -134,149 +139,176 @@ article {
     padding-left: 20px;
 }
 
-/* Work Examples */
 
+/* Work Examples */
 img {
-    max-width: 600px;
-    max-height: 200px;
-    border: var(--seafoam) solid 5px;
-    transform: ;
+    border: solid 5px var(--seafoam);
 }
 
-
- #b1 {
+.img-box {
     position: relative;
     text-align: center;
-    display: flex;
-  
-    
- }
-
-.bottom-left {
-    
-    position: absolute;
     color: var(--gray);
-    border: var(--seafoam) solid 1px;
-    background-color: var(--seafoam);
+}
+
+.img-text {
+    position: absolute;
+    bottom: 35px;
+    background: var(--seafoam);
+    padding-left: 20px;
+    color: var(--gray);
+}
+
+/* tint for the main image */
+.tint {
+    position: relative;
+    cursor: pointer;
+}
+
+.tint:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: var(--seafoam);
+    opacity: .3;
+    transition: all .3s linear;
+    width: var(--big-pic-width);
+}
+
+.tint:hover:before {
+    background: none;
+}
+
+/* tint for the smaller images */
+.tint-small {
+    position: relative;
+    cursor: pointer;
+}
+
+.tint-small:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: var(--seafoam);
+    opacity: .3;
+    transition: all .3s linear;
+    width: 145%;
+}
+
+.tint-small:hover:before {
+    background: none;
 }
 
 
-
+/*  work */
 .work {
     display: flex;
     align-items: center;
+    width: 98%;
+    margin-bottom: var(--bottom-space);
 }
 
 .work :first-child {
     width: var(--side-header-margin);
 }
 
-#container {
+.container {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
-
-    position: relative;
-    text-align: center;
-    color: white;
-}
-
-.box {
-    display: flex;
     flex-wrap: wrap;
-    /* border-style: solid;
-    border-color: var(--seafoam);
-    border-width: 3px;
-    margin: 15px;
-    flex: 0 0 300px; */
 }
 
-
-
-.bottom-left {
-    position: absolute;
-  top: 8px;
-  right: 16px;x
+.b1 {
+    flex: 100%;
 }
 
+.b2 {
+    flex: 48%;
+}
 
-    
-
+.b3 {
+    flex: 48%;
+}
 
 .box .side-header {
-    border: var(--seafoam) solid 3px ;
-
-    /* margin: 20px;
-    flex: 0 0 300px; */
-    
-
+    border: var(--seafoam) solid 3px;
 }
 
-/* Contact */
-
+/* Contact Me*/
 .contact {
     display: flex;
     align-items: center;
-    
 }
 
 .contact :first-child {
     width: var(--side-header-margin);
 }
 
-
 #cont {
     display: flex;
     justify-content: center;
-    
-
 }
 
-#number{
+#number {
     display: flex;
     justify-content: center;
     flex: 1 1 0;
     align-items: center;
-    
+    text-decoration: underline;
+    color: var(--gray);
+   
 }
 
-#email{
+#email {
     display: flex;
     justify-content: center;
     align-items: center;
     flex: 1 1 0;
 }
-
 
 .git {
     display: flex;
     justify-content: center;
     align-items: center;
     flex: 1 1 0;
-
 }
 
 #email a {
-    color: black;
+    color: var(--gray);
     border: none;
     font-size: 16px;
     padding: 0px;
     margin: 0px;
     display: flex;
     justify-content: center;
+    text-decoration: underline;
+   
 }
 
-
- .git a {
-    color: black;
+.git a {
+    color:var(--gray);
     border: none;
     font-size: 16px;
     padding: 0px;
     margin: 0px;
     display: flex;
     justify-content: center;
+    text-decoration: underline;
 }
 
+/* footer */
+.footer {
+    text-align: center;
+    margin: 2rem;
+}
 
 
 
@@ -285,6 +317,7 @@ img {
 
 /* Media Query - tablets*/
 @media screen and (max-width: 768px) {}
+
 
 /* Media Query - phones*/
 @media screen and (max-width: 576px) {}

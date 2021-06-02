@@ -27,72 +27,90 @@
     </header>
 
     <figure id="background">
-        <!-- <p id="on-back">Cool Subtitle Here!</p> -->
+        <div>
+            <p id="on-back">Cool Subtitle Here!</p>
+        </div>
     </figure>
 
-
     <main class="main">
-
-        <article class="about" id="about-me">
-            <h2 class="side-header">
-                About Me
-            </h2>
-            <p id="about-me">
-                Hello! My name is Keith Watford. I am a Philadelphia based web developer and theatre artist.
+        <article class="about">
+            <div>
+                <h2 class="side-header">
+                    About Me
+                </h2>
+            </div>
+            <p class="about-me" id="about-me">
+                Hello! My name is Keith Watford. I am a Philadelphia based theatre artist and soon to be web developer.
             </p>
         </article>
 
-
-
-
-        <article class="work">
-            <h2 class="side-header">
+        <section class="work" id="work">
+            <h2 class="side-header" > 
                 Work
             </h2>
-            <section id="container">
-
-                <article class="box" id="b1">
-                    <img src="./assets/images/pexels-photo-160107.jpeg" alt="CSS being coded into an html file."
-                        height="450" width="500">
-                    <div class="bottom-left">Bigger box</div>
+            <section class="container">
+                <article class="b1">
+                    <div class="img-box">
+                        <a href="https://keith-l-watford.github.io/horiseon-refactor/" target="_blank">
+                            <figure class="tint">
+                                <img src="./assets/images/pexels-photo-160107.jpeg"
+                                    alt="CSS being coded into an html file." style="height: 300px;
+                                width: 290%">
+                                <div class="img-text"> <strong>Horiseon Refactor</strong>
+                                    <br>
+                                    html, css
+                                </div>
+                            </figure>
+                        </a>
+                    </div>
                 </article>
 
-                <article class="box" id="b2">
-                    <div>Lil box</div>
-                    <img src="./assets/images/pexels-photo-7915305.jpeg" alt="A video game controller" height="150"
-                        width="235">
+                <article class="b2">
+                    <div class="img-box">
+                        <a href="https://scratch.mit.edu/projects/533715891" target="_blank">
+                            <figure class="tint-small">
+                                <img src="./assets/images/pexels-photo-7915305.jpeg" alt="A video game controller"
+                                    style="height: 300px;
+                        width: 145%">
+                                <div class="img-text"> <strong>Carl the Taco Collector</strong>
+                                    <br>
+                                    Stratch
+                                </div>
+                            </figure>
+                        </a>
+                    </div>
                 </article>
 
-                <article class="box" id="b3">
-                    <div>Lil box</div>
-                    <img src="./assets/images/pexels-photo-397998.jpeg" alt="A lit light-bulb." height="150"
-                        width="235">
+                <article class="b3">
+                    <div class="img-box">
+                        <a href="https://keith-l-watford.github.io/prework-about-me/" target="_blank">
+                            <figure class="tint-small">
+                                <img src="./assets/images/pexels-photo-397998.jpeg" alt="A lit light-bulb." style="height: 300px;
+                        width: 145%">
+                                <div class="img-text"> <strong>My First Coding Experience</strong>
+                                    <br>
+                                    html 
+                                </div>
+                            </figure>
+                        </a>
+                    </div>
                 </article>
             </section>
-
-
-        </article>
-
-
+        </section>
 
         <article class="contact" id="contact-me">
-
             <h2 class="side-header">Contact Me</h2>
-
-            <ol id="cont">
-
+            <ul id="cont">
                 <li id="number">555-5555</li>
                 <li id="email"> <a href="mailto:Keith.L.Watford@gmail.com">Email</a></li>
-                <li class="git"> <a href="https://github.com/Keith-L-Watford/" target="_blank"> GitHub </a></li>
-            </ol>
+                <li class="git"> <a href="https://github.com/Keith-L-Watford/" target="_blank">GitHub</a></li>
+            </ul>
         </article>
-
-
 
     </main>
 
     <footer class="footer">
-        <section></section>
+        <p>Made in 2021 with sweat and tears</p>
     </footer>
 </body>
 
